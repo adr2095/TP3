@@ -41,7 +41,9 @@ public class LastInFirstOut<K,V> extends CacheMemory<K,V> {
     }
 
     protected void Delete(LinkedNode<CacheEntry> node) {
-
+        this.elementTable.remove(node.getElement().key);
+        this.elementList.Remove(node);
+        this.numElem--;
     }
 
     public void clear() {
