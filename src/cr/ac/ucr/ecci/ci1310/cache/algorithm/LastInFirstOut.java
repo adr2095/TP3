@@ -5,21 +5,39 @@ import cr.ac.ucr.ecci.ci1310.cache.CacheMemory;
 public class LastInFirstOut<K,V> extends CacheMemory<K,V> {
 
     protected LinkedNode<CacheEntry> Lookup(K key) {
-        return null;
+        LinkedNode<CacheEntry> node = this.elementTable.get(key);
+        return node;
     }
 
     protected LinkedNode<CacheEntry> Insert(K key, V value) {
-        return null;
+
+        // Ver si el caché está lleno
+        if (this.numElem == this.size) {
+           this.SelectVictim();
+        }
+
+        CacheEntry entry = new CacheEntry(key, value);
+        this.elementList.addFirst(entry);
+        this.elementTable.put(key, this.elementList.getFirst());
+        this.numElem++;
+
+        return this.elementList.getFirst();
     }
 
     protected LinkedNode<CacheEntry> Set(LinkedNode<CacheEntry> n, V value) {
-        return null;
+
+        n.getElement().value = value;
+        return n;
     }
 
 
     protected LinkedNode<CacheEntry> SelectVictim()
     {
-        return elementList.RemoveFirst();
+        LinkedNode<CacheEntry> deleted = elementList.RemoveFirst();
+        K key = deleted.getElement().key;
+        this.elementTable.remove(key);
+        this.numElem--;
+        return deleted;
     }
 
     protected void Delete(LinkedNode<CacheEntry> node) {
@@ -27,6 +45,7 @@ public class LastInFirstOut<K,V> extends CacheMemory<K,V> {
     }
 
     public void clear() {
+
 
     }
 }

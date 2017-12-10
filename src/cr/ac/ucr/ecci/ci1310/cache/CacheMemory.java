@@ -7,10 +7,12 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
 
     public CacheMemory() {
         this.size = 10;
+        this.numElem = 0;
     }
 
     public CacheMemory(int size) {
         this.size = size;
+        this.numElem = 0;
     }
 
     public String getName(){
@@ -26,16 +28,14 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
             this.value = value;
         }
 
-        protected K key;
-        protected V value;
+        public K key;
+        public V value;
     }
 
     public V get(K var1) {
         LinkedNode<CacheEntry> n = this.Lookup(var1);
         if (n == null) {
-            // Buscar en la base de datos;
-            V value = this.Query(var1);
-            n = this.Insert(var1, value);
+            return null;
         }
         return n.getElement().value;
     }
@@ -56,9 +56,11 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
         }
     }
 
+    /* No se ocupa aquí!
     public V Query(K var1) {
         return null;
     }
+    */
 
     /**
      * Busca una entrada en el cache.
@@ -93,8 +95,9 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
 
     /**
      * Selecciona el dato que se debe eliminar del caché según la
-     * política de substitución.
-     * @return El nodo a ser eliminado.
+     * política de substitución. Elimina el nodo de la lista y la
+     * tabla hash y retorna una referencia al mismo.
+     * @return El nodo eliminado.
      */
     protected abstract LinkedNode<CacheEntry> SelectVictim();
 
@@ -110,9 +113,10 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
      * El máximo número de elementos que puede haber en el caché.
      */
     protected final int size;
+    protected int numElem;
 
     protected String name;
 
-    protected HashMap<K,CacheEntry> elementTable;
+    protected HashMap<K,LinkedNode<CacheEntry>> elementTable;
     protected LinkedList<CacheEntry> elementList;
 }
