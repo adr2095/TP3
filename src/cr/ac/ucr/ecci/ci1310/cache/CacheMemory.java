@@ -1,6 +1,8 @@
 package cr.ac.ucr.ecci.ci1310.cache;
+import cr.ac.ucr.ecci.ci1310.util.MyLinkedList.LinkedNode;
+import java.util.*;
 
-public class CacheMemory implements Cache{
+public class CacheMemory <K,V> implements Cache <K,V>{
 
     public CacheMemory() {
         this.size = 10;
@@ -15,7 +17,7 @@ public class CacheMemory implements Cache{
     }
 
     public V get(K var1) {
-        Object n = this.Lookup(var1);
+        LinkedNode n = this.Lookup(var1);
         if (n == null) {
             // Buscar en la base de datos;
             V value = this.Query(var1);
@@ -24,7 +26,7 @@ public class CacheMemory implements Cache{
         return n.value();
     }
     public void put(K var1, V var2) {
-        Object n = this.Lookup(var1);
+        LinkedNode n = this.Lookup(var1);
         if (n == null) {
             n = this.Insert(var1, value);
         } else {
@@ -33,16 +35,16 @@ public class CacheMemory implements Cache{
     }
 
     public void evict(K var1) {
-        Object n = this.Lookup(var1);
+        LinkedNode n = this.Lookup(var1);
         if (n != null) {
             this.Delete(n);
         }
     }
 
-    protected abstract Object Lookup(K key);
-    protected abstract Object Insert(K key, V value);
-    protected abstract Object Set(Object n, V value);
-    protected abstract Object SelectVictim();
+    protected abstract LinkedNode Lookup(K key);
+    protected abstract LinkedNode Insert(K key, V value);
+    protected abstract LinkedNode Set(LinkedNode n, V value);
+    protected abstract LinkedNode SelectVictim();
     protected abstract void Delete(K key);
 
     protected int size;
