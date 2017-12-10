@@ -8,11 +8,15 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
     public CacheMemory() {
         this.size = 10;
         this.numElem = 0;
+        int mapCapacity = (int) Math.ceil((10+1)/0.75);
+        this.elementTable = new HashMap<K,LinkedNode<CacheEntry>>(mapCapacity)
     }
 
     public CacheMemory(int size) {
         this.size = size;
         this.numElem = 0;
+        int mapCapacity = (int) Math.ceil((size+1)/0.75);
+        this.elementTable = new HashMap<K,LinkedNode<CacheEntry>>(mapCapacity)
     }
 
     public String getName(){
