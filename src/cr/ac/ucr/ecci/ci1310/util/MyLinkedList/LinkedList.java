@@ -55,6 +55,8 @@ public class LinkedList<E> {
             this.last = null;
         }
         numElem--;
+        tmp.next = null;
+        tmp.prev = null;
         return tmp;
     }
 
@@ -70,9 +72,35 @@ public class LinkedList<E> {
             this.first = null;
         }
         numElem--;
+        tmp.next = null;
+        tmp.prev = null;
         return tmp;
     }
 
+    public LinkedNode<E> Remove(LinkedNode<E> node) {
+        if (numElem == 0) {
+            return null;
+        } else {
+            if (numElem == 1) {
+                this.first = null;
+                this.last = null;
+            } else if (this.first == node) {
+                this.first = node.next;
+                this.first.prev = null;
+            } else if (this.last == node) {
+                this.last = node.prev;
+                this.last.next = null;
+            } else {
+                node.next.prev = node.prev;
+                node.prev.next = node.next;
+            }
+
+            this.numElem--;
+            node.next = null;
+            node.prev = null;
+            return node;
+        }
+    }
 
     private int numElem;
     private LinkedNode<E> first;
