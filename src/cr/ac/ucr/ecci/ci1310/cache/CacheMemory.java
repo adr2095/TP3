@@ -17,28 +17,42 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
         return this.name;
     }
 
+    /**
+     * Esta clase encapsula los datos que se guardan en el caché.
+     */
+    protected class CacheEntry {
+        public CacheEntry(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        protected K key;
+        protected V value;
+    }
+
     public V get(K var1) {
-        LinkedNode n = this.Lookup(var1);
+        LinkedNode<CacheEntry> n = this.Lookup(var1);
         if (n == null) {
             // Buscar en la base de datos;
             V value = this.Query(var1);
             n = this.Insert(var1, value);
         }
-        return ((V) n.getElement());
+        return n.getElement().value;
     }
     public void put(K var1, V var2) {
-        LinkedNode n = this.Lookup(var1);
+        LinkedNode<CacheEntry> n = this.Lookup(var1);
         if (n == null) {
-            n = this.Insert(var1, var2);
+            this.Insert(var1, var2);
         } else {
-            n.setElement(var2);
+            //n.setElement(var2);
+            this.Set(n, var2);
         }
     }
 
     public void evict(K var1) {
-        LinkedNode n = this.Lookup(var1);
+        LinkedNode<CacheEntry> n = this.Lookup(var1);
         if (n != null) {
-            this.Delete((K) n);
+            this.Delete(n);
         }
     }
 
@@ -46,14 +60,59 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
         return null;
     }
 
-    protected abstract LinkedNode Lookup(K key);
-    protected abstract LinkedNode Insert(K key, V value);
-    protected abstract LinkedNode Set(LinkedNode n, V value);
-    protected abstract LinkedNode SelectVictim();
-    protected abstract void Delete(K key);
+    /**
+     * Busca una entrada en el cache.
+     * Busca una llave en la tabla hash del cache, indica su posición en la lista
+     * de elementos si está cacheada.
+     * @param key La llave que se busca.
+     * @return Retorna una referencia al LinkedNode que contiene los datos de la
+     * llave solicitada, o bien null si no está cacheada.
+     */
+    protected abstract LinkedNode<CacheEntry> Lookup(K key);
 
-    protected int size;
+    /**
+     * Añade una nueva entrada al caché.
+     * Crea un nuevo nodo en la lista de elementos y añade una entrada en la
+     * tabla hash. Si el caché está lleno elimina un elemento según la política
+     * definida por el método SelectVictim.
+     * @param key La llave del nuevo elemento.
+     * @param value Los datos del nuevo elemento.
+     * @return Una referencia al nuevo nodo creado.
+     */
+    protected abstract LinkedNode<CacheEntry> Insert(K key, V value);
+
+    /**
+     * Sobreescribe los datos cacheados en un nodo.
+     * Este método se usa para cambiar los datos asociados a una llave, sin cambiar
+     * la entrada de esa llave en el hash map.
+     * @param node El nodo que contiene los datos cacheados.
+     * @param value El nuevo valor de los datos.
+     * @return Una referencia a node.
+     */
+    protected abstract LinkedNode<CacheEntry> Set(LinkedNode<CacheEntry> node, V value);
+
+    /**
+     * Selecciona el dato que se debe eliminar del caché según la
+     * política de substitución.
+     * @return El nodo a ser eliminado.
+     */
+    protected abstract LinkedNode<CacheEntry> SelectVictim();
+
+    /**
+     * Elimina una entrada del caché.
+     * Se encarga de elminar el nodo dado y borrar la entrada correspondiente en la
+     * tabla hash.
+     * @param node El nodo a eliminar.
+     */
+    protected abstract void Delete(LinkedNode<CacheEntry> node);
+
+    /**
+     * El máximo número de elementos que puede haber en el caché.
+     */
+    protected final int size;
+
     protected String name;
-    protected HashMap<K,V> elementTable;
-    protected LinkedList<V> elementList;
+
+    protected HashMap<K,CacheEntry> elementTable;
+    protected LinkedList<CacheEntry> elementList;
 }
