@@ -59,6 +59,9 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
             this.Delete(n);
         }
     }
+    public void clear() {
+       ;
+    }
 
     /* No se ocupa aquí!
     public V Query(K var1) {

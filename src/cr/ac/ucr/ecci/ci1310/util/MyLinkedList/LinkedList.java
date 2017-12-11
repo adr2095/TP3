@@ -3,9 +3,9 @@ package cr.ac.ucr.ecci.ci1310.util.MyLinkedList;
 public class LinkedList<E> {
 
     public LinkedList(){
-        first = null;
-        last = null;
-        numElem = 0;
+        this.first = null;
+        this.last = null;
+        this.numElem = 0;
     }
 
     public void addFirst(E element) {
@@ -13,26 +13,26 @@ public class LinkedList<E> {
         LinkedNode<E> n = new LinkedNode<E>(element);
 
         n.next = this.first;
-        if (numElem == 0) {
+        if (this.numElem == 0) {
             this.last = n;
         } else {
             this.first.prev = n;
         }
         this.first = n;
-        numElem++;
+        this.numElem++;
     }
 
     public void addLast(E element) {
         LinkedNode<E> n = new LinkedNode<E>(element);
 
         n.prev = this.last;
-        if (numElem == 0) {
+        if (this.numElem == 0) {
             this.first = n;
         } else {
             this.last.next = n;
         }
         this.last = n;
-        numElem++;
+        this.numElem++;
     }
 
     public LinkedNode<E> getFirst() {
@@ -44,44 +44,44 @@ public class LinkedList<E> {
     }
 
     public LinkedNode<E> RemoveFirst() {
-        if (numElem == 0) {
+        if (this.numElem == 0) {
             return null;
         }
 
         LinkedNode<E> tmp = this.first;
         this.first = tmp.next;
         this.first.prev = null;
-        if (numElem == 1) {
+        if (this.numElem == 1) {
             this.last = null;
         }
-        numElem--;
+        this.numElem--;
         tmp.next = null;
         tmp.prev = null;
         return tmp;
     }
 
     public LinkedNode<E> RemoveLast() {
-        if (numElem == 0) {
+        if (this.numElem == 0) {
             return null;
         }
 
         LinkedNode<E> tmp = this.last;
         this.last = tmp.prev;
         this.last.next = null;
-        if (numElem == 1) {
+        if (this.numElem == 1) {
             this.first = null;
         }
-        numElem--;
+        this.numElem--;
         tmp.next = null;
         tmp.prev = null;
         return tmp;
     }
 
     public LinkedNode<E> Remove(LinkedNode<E> node) {
-        if (numElem == 0) {
+        if (this.numElem == 0) {
             return null;
         } else {
-            if (numElem == 1) {
+            if (this.numElem == 1) {
                 this.first = null;
                 this.last = null;
             } else if (this.first == node) {
@@ -100,6 +100,10 @@ public class LinkedList<E> {
             node.prev = null;
             return node;
         }
+    }
+
+    public int NumElem() {
+        return this.numElem;
     }
 
     private int numElem;
