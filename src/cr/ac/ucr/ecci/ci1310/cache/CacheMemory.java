@@ -64,7 +64,10 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
         }
     }
     public void clear() {
-       ;
+        // TODO
+        // Falta implementar clear en la lista
+        this.elementTable.clear();
+        this.numElem = 0;
     }
 
     /* No se ocupa aquí!
