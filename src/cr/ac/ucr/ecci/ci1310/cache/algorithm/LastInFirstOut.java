@@ -4,6 +4,14 @@ import cr.ac.ucr.ecci.ci1310.cache.CacheMemory;
 
 public class LastInFirstOut<K,V> extends CacheMemory<K,V> {
 
+    public LastInFirstOut() {
+        super();
+    }
+
+    public LastInFirstOut(int size) {
+        super(size);
+    }
+
     protected LinkedNode<CacheEntry> Lookup(K key) {
         LinkedNode<CacheEntry> node = this.elementTable.get(key);
         return node;
@@ -46,8 +54,14 @@ public class LastInFirstOut<K,V> extends CacheMemory<K,V> {
         this.numElem--;
     }
 
+
     public void clear() {
 
 
     }
+
+    protected int NumElem() {
+        return this.numElem;
+    }
+
 }

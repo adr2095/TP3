@@ -1,6 +1,8 @@
 package cr.ac.ucr.ecci.ci1310.cache;
 import cr.ac.ucr.ecci.ci1310.util.MyLinkedList.LinkedNode;
 import cr.ac.ucr.ecci.ci1310.util.MyLinkedList.LinkedList;
+import org.codehaus.groovy.runtime.metaclass.MetaMethodIndex;
+
 import java.util.HashMap;
 
 public abstract class CacheMemory <K,V> implements Cache <K,V>{
@@ -10,6 +12,7 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
         this.numElem = 0;
         int mapCapacity = (int) Math.ceil((10+1)/0.75);
         this.elementTable = new HashMap<K,LinkedNode<CacheEntry>>(mapCapacity);
+        this.elementList = new LinkedList<CacheEntry>();
     }
 
     public CacheMemory(int size) {
@@ -17,6 +20,7 @@ public abstract class CacheMemory <K,V> implements Cache <K,V>{
         this.numElem = 0;
         int mapCapacity = (int) Math.ceil((size+1)/0.75);
         this.elementTable = new HashMap<K,LinkedNode<CacheEntry>>(mapCapacity);
+        this.elementList = new LinkedList<CacheEntry>();
     }
 
     public String getName(){
