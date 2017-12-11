@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bfb2e21-b650-40bc-9081-4bf17d99596f" name="Default" comment="Errores de sintaxis">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/test/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedListTest.groovy" />
+    <list default="true" id="6bfb2e21-b650-40bc-9081-4bf17d99596f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/TP3.iml" afterPath="$PROJECT_DIR$/TP3.iml" />
-      <change beforePath="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/cache/CacheMemory.java" afterPath="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/cache/CacheMemory.java" />
+      <change beforePath="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/test/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedListTest.groovy" afterPath="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/test/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedListTest.groovy" />
       <change beforePath="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedList.java" afterPath="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedList.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -77,10 +75,11 @@
       <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="104" column="25" lean-forward="false" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+            <state relative-caret-position="305">
+              <caret line="72" column="8" lean-forward="false" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
               <folding>
-                <element signature="e#2492#2493#0" expanded="true" />
+                <element signature="e#2499#2500#0" expanded="true" />
+                <element signature="e#2534#2535#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,8 +88,8 @@
       <file leaf-file-name="LinkedListTest.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/test/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedListTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="251">
+              <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,8 +138,8 @@
         <option value="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/cache/algorithm/FirstInFirstOut.java" />
         <option value="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/cache/algorithm/LastInFirstOut.java" />
         <option value="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedListTest.groovy" />
-        <option value="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/cache/CacheMemory.java" />
+        <option value="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/test/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedListTest.groovy" />
       </list>
     </option>
@@ -253,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListTest">
+  <component name="RunManager" selected="JUnit.LinkedListTest (1)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -344,6 +343,31 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="LinkedListTest.testAddFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cr.ac.ucr.ecci.ci1310.util.MyLinkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TP3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cr.ac.ucr.ecci.ci1310.util.MyLinkedList" />
+      <option name="MAIN_CLASS_NAME" value="cr.ac.ucr.ecci.ci1310.util.MyLinkedList.LinkedListTest" />
+      <option name="METHOD_NAME" value="testAddFirst" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -404,16 +428,18 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Connection" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.LinkedListTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.LinkedListTest (1)" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LinkedListTest.testAddFirst" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LinkedListTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LinkedListTest (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Connection" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.LinkedListTest (1)" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LinkedListTest.testAddFirst" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LinkedListTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Connection" />
       </list>
     </recent_temporary>
   </component>
@@ -431,7 +457,7 @@
       <option name="presentableId" value="Default" />
       <updated>1512862357151</updated>
       <workItem from="1512862360711" duration="9000" />
-      <workItem from="1512916004194" duration="17369000" />
+      <workItem from="1512916004194" duration="21965000" />
     </task>
     <task id="LOCAL-00001" summary="Correcciones a la clase CacheMemory.&#10;&#10;Documentación de los métodos abstractos y definición de una clase CacheEntry&#10;para encapsular los datos guardados.">
       <created>1512920857184</created>
@@ -461,22 +487,50 @@
       <option name="project" value="LOCAL" />
       <updated>1512941461520</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Groovy Unit Tests para LinkedList">
+      <created>1512954065036</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1512954065036</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedListTest - 2017.12.10 at 18h 58m 15s.xml">
-      <configuration name="LinkedListTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 18h 56m 29s.xml">
+    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 21h 23m 26s.xml">
       <configuration name="LinkedListTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 18h 57m 41s.xml">
+    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 21h 23m 52s.xml">
+      <configuration name="LinkedListTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 21h 27m 54s.xml">
+      <configuration name="LinkedListTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 21h 28m 52s.xml">
+      <configuration name="LinkedListTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 21h 31m 10s.xml">
+      <configuration name="LinkedListTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 21h 35m 01s.xml">
+      <configuration name="LinkedListTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 21h 35m 33s.xml">
+      <configuration name="LinkedListTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 21h 36m 17s.xml">
+      <configuration name="LinkedListTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 21h 36m 35s.xml">
+      <configuration name="LinkedListTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_(1) - 2017.12.10 at 21h 42m 21s.xml">
       <configuration name="LinkedListTest (1)" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22785000" />
+    <option name="totallyTimeSpent" value="27381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1280" height="773" extended-state="6" />
@@ -491,7 +545,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.503125" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874617" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -548,7 +602,8 @@
     <MESSAGE value="Clase LIFO" />
     <MESSAGE value="Correcciones menores de generics" />
     <MESSAGE value="Errores de sintaxis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Errores de sintaxis" />
+    <MESSAGE value="Groovy Unit Tests para LinkedList" />
+    <option name="LAST_COMMIT_MESSAGE" value="Groovy Unit Tests para LinkedList" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -588,7 +643,8 @@
         <state relative-caret-position="36">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#2492#2493#0" expanded="true" />
+            <element signature="e#2499#2500#0" expanded="true" />
+            <element signature="e#2534#2535#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -671,16 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="104" column="25" lean-forward="false" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
-          <folding>
-            <element signature="e#2492#2493#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/cache/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -711,10 +757,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="72" column="8" lean-forward="false" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+          <folding>
+            <element signature="e#2499#2500#0" expanded="true" />
+            <element signature="e#2534#2535#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cr/ac/ucr/ecci/ci1310/test/cr/ac/ucr/ecci/ci1310/util/MyLinkedList/LinkedListTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="251">
+          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
           <folding />
         </state>
       </provider>

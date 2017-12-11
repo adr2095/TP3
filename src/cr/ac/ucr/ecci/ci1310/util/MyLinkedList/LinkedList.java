@@ -50,9 +50,10 @@ public class LinkedList<E> {
 
         LinkedNode<E> tmp = this.first;
         this.first = tmp.next;
-        this.first.prev = null;
         if (this.numElem == 1) {
             this.last = null;
+        } else {
+            this.first.prev = null;
         }
         this.numElem--;
         tmp.next = null;
@@ -67,9 +68,10 @@ public class LinkedList<E> {
 
         LinkedNode<E> tmp = this.last;
         this.last = tmp.prev;
-        this.last.next = null;
         if (this.numElem == 1) {
             this.first = null;
+        } else {
+            this.last.next = null;
         }
         this.numElem--;
         tmp.next = null;
