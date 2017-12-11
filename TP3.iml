@@ -11,15 +11,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://C:/Program Files/Microsoft SQL Server JDBC Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$APPLICATION_HOME_DIR$/lib/groovy-all-2.4.12.jar!/" />
         </CLASSES>
         <JAVADOC />
